@@ -1,0 +1,7 @@
+.container {
+  white-space: nowrap;
+}
+
+.row {
+  display: flex;
+}
