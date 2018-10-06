@@ -18,8 +18,8 @@ function createBoxes(shape, grid, adjacents, mined) {
       boxes[id] = {
         adjacents: adjacents[r][c],
         adjacentMinesCount: 0,
+        flagged: false,
         id,
-        marked: false,
         mined: mined[r][c],
         visible: false,
       };
@@ -84,5 +84,5 @@ export default (length, rows, mines) => {
   const mined = getMined(random, random2d, grid, mines);
   const boxes = createBoxes(shape, grid, adjacents, mined);
 
-  return { boxes, grid, length, shape };
+  return { boxes, grid, length, mines, shape };
 };
