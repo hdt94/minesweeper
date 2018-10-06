@@ -10,7 +10,9 @@ import Status from './Status';
 
 class Game extends React.Component {
   componentDidMount() {
-    this.createNewGame();
+    if (this.props.game.status.length === 0) {
+      this.createNewGame();
+    }
   }
 
   componentDidUpdate() {
