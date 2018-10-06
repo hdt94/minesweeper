@@ -82,6 +82,8 @@ class Game extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.status}>
+          <p>Click to open a box</p>
+          <p>Right click to flag/unflag a box</p>
           <Controls onNewGame={this.createNewGame}/>
           <Status status={status} />
         </div>
